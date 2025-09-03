@@ -151,8 +151,12 @@ extra_css:
 
 
 nav:
-
-  - 2025.2: ./versions/2025.2/main.md
+  - Banco de dados: 
+    - Conceitos: ./classes/dados/conceitos.md
+  - SQL:
+    - Introdução: ./classes/sql/introducao.md
+    - Consultas: ./classes/sql/consultas.md
+    - JOIN: ./classes/sql/juncoes.md  
   - Aulas:
     - 1. Concepts:
       - 1.1. Machine Learning: ./classes/concepts/ml/ml.md
@@ -173,5 +177,3 @@ nav:
     - Projeto I: ./versions/2025.2/projects/1/projeto_i.md
     - Projeto II: ./versions/2025.2/projects/2/projeto_ii.md
 
-  - Versões:
-    - 2025.2: ./versions/2025.2/main.md
