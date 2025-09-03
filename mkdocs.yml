@@ -1,8 +1,8 @@
 site_name: Banco de Dados
 site_author: Maria Gabriela Santos
-site_url: https://hsandmann.github.io/ml
-repo_url: https://github.com/hsandmann/ml
-repo_name: hsandmann/ml
+site_url: https://mgabriel4.github.io/banco-de-dados
+repo_url: https://github.com/mgabriel4/banco-de-dados
+repo_name: mgabriel4/banco-de-dados
 
 theme:
   name: material
