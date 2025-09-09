@@ -1,4 +1,4 @@
-site_name: Banco de Dados
+site_name: Dados
 site_author: Maria Gabriela Santos
 site_url: https://mgabriel4.github.io/banco-de-dados
 repo_url: https://github.com/mgabriel4/banco-de-dados
@@ -8,14 +8,14 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: green
+      primary: blue grey
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
 
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: green
+      primary: blue grey
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
@@ -23,15 +23,14 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: green
+      primary: blue grey
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      primary: green
-      scheme: slate
+      primary: blue grey
       toggle:
         icon: material/toggle-switch
         name: Switch to system preference
@@ -68,7 +67,7 @@ theme:
       bug: fontawesome/solid/robot
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
-  logo: assets/images/logo.png
+  logo: assets/images/server.png
 
 markdown_extensions:
   - admonition
@@ -153,10 +152,18 @@ extra_css:
 nav:
   - Banco de dados: 
     - Conceitos: ./classes/dados/conceitos.md
+    - Abordagens e Modelos: ./classes/dados/modelos.md
+
   - SQL:
     - Introdução: ./classes/sql/introducao.md
     - Consultas: ./classes/sql/consultas.md
     - JOIN: ./classes/sql/juncoes.md  
+    - Subqueries: ./classes/sql/subqueries.md
+    - Normalização: ./classes/sql/normalizacao.md
+  - NoSQL:
+    - Introdução: ./classes/nosql/introducao.md
+    - MongoDB: ./classes/nosql/mongodb.md
+    - Cassandra: ./classes/nosql/cassandra.md
   - Aulas:
     - 1. Concepts:
       - 1.1. Machine Learning: ./classes/concepts/ml/ml.md

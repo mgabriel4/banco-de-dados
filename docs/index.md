@@ -1,5 +1,3 @@
-# Machine Learning
+# Banco de dados
 
-| Versions |
-|--------|
-| [2025.2](./versions/2025.2/2025.2.md) |
+Repositório elaborado para fins estudantis.
