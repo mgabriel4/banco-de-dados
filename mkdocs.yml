@@ -1,40 +1,31 @@
-site_name: Dados
+site_name: Banco de Dados
+site_description: Anotações, exemplos e materiais de estudo sobre bancos de dados, visualização de dados e aprendizado de máquina.
 site_author: Maria Gabriela Santos
-site_url: https://mgabriel4.github.io/banco-de-dados
+site_url: https://mgabriel4.github.io/banco-de-dados/
 repo_url: https://github.com/mgabriel4/banco-de-dados
 repo_name: mgabriel4/banco-de-dados
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; Maria Gabriela Santos
 
 theme:
   name: material
+  language: pt-BR
+  logo: assets/images/server.png
+  favicon: assets/images/server.png
   palette:
     - scheme: default
       primary: blue grey
+      accent: blue
       toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
+        icon: material/weather-night
+        name: Usar tema escuro
+    - scheme: slate
       primary: blue grey
+      accent: light blue
       toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+        icon: material/weather-sunny
+        name: Usar tema claro
 
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue grey
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      primary: blue grey
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to system preference
-  
   font:
     text: Roboto
     code: Fira Code
@@ -49,11 +40,12 @@ theme:
     - content.tabs.link
     - navigation.instant
     - navigation.instant.progress
+    - navigation.footer
     - navigation.top
     - navigation.path
     - navigation.tracking
   icon:
-    # logo: assets/images/devops
+    repo: fontawesome/brands/github
     admonition:
       note: fontawesome/solid/note-sticky
       abstract: fontawesome/solid/book
@@ -67,7 +59,6 @@ theme:
       bug: fontawesome/solid/robot
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
-  logo: assets/images/server.png
 
 markdown_extensions:
   - admonition
@@ -84,7 +75,7 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.blocks.caption
@@ -112,8 +103,8 @@ markdown_extensions:
 
 
 plugins:
+  - search
   - awesome-pages
-  - mermaid2
   - table-reader
   - mkdocs-jupyter
   - glightbox
@@ -121,11 +112,6 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   - git-authors
-  - git-committers:
-      repository: insper/ann-dl
-      branch: main
-      token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
-  - search
   - minify:
       minify_html: true
   - badges
@@ -140,7 +126,6 @@ plugins:
 
 extra_javascript:
   - assets/javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
@@ -148,39 +133,30 @@ extra_css:
   - assets/stylesheets/neoteroi-timeline.css
   - assets/stylesheets/extra.css
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mgabriel4
+      name: Maria Gabriela Santos no GitHub
+
+not_in_nav: |
+  classes/**/*.py
+  classes/preprocessing/ok.md
 
 nav:
-  - Banco de dados: 
-    - Conceitos: ./classes/dados/conceitos.md
-    - Abordagens e Modelos: ./classes/dados/modelos.md
-
+  - Início: index.md
+  - Banco de dados:
+    - Conceitos: classes/dados/conceitos.md
+    - Abordagens e modelos: classes/dados/modelos.md
   - SQL:
-    - Introdução: ./classes/sql/introducao.md
-    - Consultas: ./classes/sql/consultas.md
-    - JOIN: ./classes/sql/juncoes.md  
-    - Subqueries: ./classes/sql/subqueries.md
-    - Normalização: ./classes/sql/normalizacao.md
+    - Introdução: classes/sql/introducao.md
+    - Consultas: classes/sql/consultas.md
+    - Junções (JOIN): classes/sql/juncoes.md
+    - Subconsultas: classes/sql/subqueries.md
+    - Normalização: classes/sql/normalizacao.md
   - NoSQL:
-    - Introdução: ./classes/nosql/introducao.md
-    - MongoDB: ./classes/nosql/mongodb.md
-    - Cassandra: ./classes/nosql/cassandra.md
-  - Aulas:
-    - 1. Concepts:
-      - 1.1. Machine Learning: ./classes/concepts/ml/ml.md
-      - 1.2. KDD: ./classes/concepts/kdd/kdd.md
-      - 1.3. Data: ./classes/concepts/data/data.md
-      - 1.4. Exercise: ./classes/concepts/exercise/exercise.md
-    - 2. Decision Tree: ./classes/decision_tree/decision_tree.md
-    - 3. Preprocessing: ./classes/preprocessing/preprocessing.md
-    - 4. KNN: ./classes/knn/knn.md
-    - 5. K-Means: ./classes/kmeans/kmeans.md
-    - 6. Evaluation Metrics: ./classes/metrics/metricas.md
-    - 7. Random Forest: ./classes/random_forest/random_forest.md
-    - 8. SVM: ./classes/svm/svm.md
-    - 9. Page Rank: ./classes/page_rank/page_rank.md
-    - 10. PySpark: ./classes/pyspark/pyspark.md
-
-  - Projetos:
-    - Projeto I: ./versions/2025.2/projects/1/projeto_i.md
-    - Projeto II: ./versions/2025.2/projects/2/projeto_ii.md
-
+    - Introdução: classes/nosql/introducao.md
+    - MongoDB: classes/nosql/mongodb.md
+    - Cassandra: classes/nosql/cassandra.md
+  - Visualização de dados:
+    - Gráficos: classes/visualizacao/graficos.md

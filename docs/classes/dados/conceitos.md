@@ -22,16 +22,16 @@ Ou seja, dado = elemento isolado, informação = dado com contexto.
 
 Um sistema de banco de dados não é só o banco em si. Ele é formado por:
 
-1. Dados – são as informações armazenadas, o conteúdo em si.
+1. **Dados** – são as informações armazenadas, o conteúdo em si.
     * Podem ser acessados por um usuário (mono) ou muitos ao mesmo tempo (multi).
 
     * Precisam ser integrados (não duplicados) e compartilhados.
 
-2. Hardware – equipamentos que armazenam e processam dados. Ex: HDs, servidores, memória.
+2. **Hardware** – equipamentos que armazenam e processam dados. Ex: HDs, servidores, memória.
 
-3. Software – programas que gerenciam os dados. Ex: Oracle, MySQL, SQL Server, PostgreSQL.
+3. **Software** – programas que gerenciam os dados. Ex: Oracle, MySQL, SQL Server, PostgreSQL.
 
-4. Usuários:
+4. **Usuários**:
 
     * DBA (Administrador de Banco de Dados): cuida da segurança, desempenho e manutenção.
 
